@@ -15,5 +15,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "React application for infoShare course by AMPF team",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
