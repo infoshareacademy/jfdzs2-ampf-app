@@ -1,7 +1,7 @@
 import React, {PureComponent, Fragment} from 'react';
 import Menu from "../../components/menu/menu.component";
 
-class Recipes extends PureComponent {
+class Search extends PureComponent {
 
     render() {
         return (
@@ -12,4 +12,4 @@ class Recipes extends PureComponent {
     }
 }
 
-export default Recipes;
+export default Search;
