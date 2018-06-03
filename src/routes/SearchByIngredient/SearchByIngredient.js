@@ -7,6 +7,7 @@ class SearchByIngredient extends PureComponent {
         return (
             <Fragment>
                 <Menu/>
+
             </Fragment>
         );
     }
