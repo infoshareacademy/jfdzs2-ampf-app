@@ -1,3 +1,8 @@
+// import '../node_modules/bootstrap/dist/css/bootstrap.css';
+// import '../node_modules/bootstrap/dist/css/bootstrap-grid.css';
+// import '../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
@@ -12,6 +17,7 @@ import SearchByName from "./routes/SearchByName/SearchByName";
 import Settings from "./routes/Settings/Settings";
 import SignUp from "./routes/SignUp/SignUp";
 import SingleRecipe from "./routes/SingleRecipe/SingleRecipe";
+
 
 
 
