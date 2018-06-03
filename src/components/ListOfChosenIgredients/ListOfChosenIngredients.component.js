@@ -11,7 +11,7 @@ class ListOfChosenIngredients extends PureComponent {
     renderIngredientsList = () =>
     this.props.arrayOfIngredients.map((item,index) =>
         <div className="singleIngredient"
-              key={index} >
+              key={index}>
                     {item}&nbsp;&nbsp;&nbsp;
                     <a href='#'
                       onClick={this.removeIngredient}>X
