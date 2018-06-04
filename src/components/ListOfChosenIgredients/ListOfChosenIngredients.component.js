@@ -4,7 +4,8 @@ import "./ListOfChosenIngredients.style.css";
 
 class ListOfChosenIngredients extends PureComponent {
 
-    removeIngredient = (index) => {
+    removeIngredient = (index,event) => {
+        event.preventDefault();
         this.setState(this.props.arrayOfIngredients.splice(index, 1))
     };
 
@@ -14,7 +15,8 @@ class ListOfChosenIngredients extends PureComponent {
               key={index}>
                     {item}&nbsp;&nbsp;&nbsp;
                     <a href='#'
-                      onClick={this.removeIngredient}>X
+                       value={index}
+                       onClick={this.removeIngredient.bind(this,index)}>X
                     </a>
         </div>
     );
