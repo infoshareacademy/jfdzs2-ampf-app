@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+.feature_signUp {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.feature_signUp h2{
+    font-size: 2.2em;
+    text-align: center;
+    padding-bottom: 16px;
+    margin: 0 auto;
+    max-width: 208px;
+    border-bottom: solid 2px #29B200;
+}
+
+.feature_signUp input {
+    border: solid #29B200 2px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.feature_signUpButton {
+    margin-top: 32px;
+    color: white;
+    background-color: #29B200;
+    max-height: 100px;
+    min-width: 100%;
+    font-size: 2.2em;
+    align-self: center;
+}

@@ -1,10 +1,8 @@
-// import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
-// import '../../../node_modules/bootstrap/dist/css/bootstrap-grid.css';
-// import '../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
 import ListOfChosenIgredients from '../../components/ListOfChosenIgredients/ListOfChosenIngredients.component';
 import {Button, FormControl, Grid, Row, Col, Image, FormGroup} from 'react-bootstrap';
 import React, {PureComponent, Fragment} from 'react';
 // import Menu from "../../components/menu/menu.component";
+
 import Search from "../../utils/images/search.png";
 import SearchWhite from "../../utils/images/search-white.png";
 
