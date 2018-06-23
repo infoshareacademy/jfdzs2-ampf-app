@@ -1,7 +1,7 @@
 import ListOfChosenIgredients from '../../components/ListOfChosenIgredients/ListOfChosenIngredients.component';
 import {Button, FormControl, Grid, Row, Col, Image, FormGroup} from 'react-bootstrap';
 import React, {PureComponent, Fragment} from 'react';
-// import Menu from "../../components/menu/menu.component";
+import Menu from "../../components/menu/menu.component";
 
 import Search from "../../utils/images/search.png";
 import SearchWhite from "../../utils/images/search-white.png";
@@ -37,6 +37,7 @@ class SearchByIngredient extends PureComponent {
     render() {
         return (
             <Fragment>
+                <Menu/>
                 <Grid className='feature_search_by_ingredient'>
                     <h2>
                         <Image className="search_image"

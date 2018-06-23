@@ -25,6 +25,7 @@ class Signup extends PureComponent {
     render() {
         return (
             <Fragment>
+                <Menu/>
                 <Grid className='feature_signUp'>
                     <h2>
                         Sign Up

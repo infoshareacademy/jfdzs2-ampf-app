@@ -14,6 +14,7 @@ class Search extends PureComponent {
     render() {
         return (
             <Fragment>
+                <Menu/>
                 <Grid className='feature_search'>
                     <h2>
                         <Image className="search_image"
