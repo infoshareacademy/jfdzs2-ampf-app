@@ -1,0 +1,10 @@
+.navbarContainer {
+    border-radius: 0;
+}
+.navbarHeader {
+    float: right;
+}
+
+.navbarCollapse {
+    float: left;
+}

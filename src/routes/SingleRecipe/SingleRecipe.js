@@ -1,5 +1,5 @@
 import React, {Fragment, PureComponent} from 'react';
-import Menu from "../../components/menu/menu.component";
+import Menu from "../../components/Header/header.component";
 
 class SingleRecipe extends PureComponent {
 

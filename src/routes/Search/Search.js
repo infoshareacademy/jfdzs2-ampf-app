@@ -1,6 +1,6 @@
 import React, {PureComponent, Fragment} from 'react';
 import {Grid, Row, Col, Image, Thumbnail} from 'react-bootstrap';
-import Menu from "../../components/menu/menu.component";
+import Menu from "../../components/Header/header.component";
 import {Link} from 'react-router-dom';
 
 import SearchIcon from '../../utils/images/search.png';
