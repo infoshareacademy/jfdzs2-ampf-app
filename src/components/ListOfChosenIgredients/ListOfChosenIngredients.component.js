@@ -6,7 +6,7 @@ class ListOfChosenIngredients extends PureComponent {
 
     removeIngredient = (index,event) => {
         event.preventDefault();
-        this.setState(this.props.arrayOfIngredients.splice(index, 1))
+        this.setState(this.props.arrayOfIngredients.splice(index, 1));
     };
 
     renderIngredientsList = () =>

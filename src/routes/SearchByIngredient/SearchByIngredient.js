@@ -1,6 +1,7 @@
 import ListOfChosenIgredients from '../../components/ListOfChosenIgredients/ListOfChosenIngredients.component';
 import {Button, FormControl, Grid, Row, Col, Image, FormGroup} from 'react-bootstrap';
 import React, {PureComponent, Fragment} from 'react';
+import {Link} from 'react-router-dom';
 // import Menu from "../../components/menu/menu.component";
 
 import Search from "../../utils/images/search.png";
@@ -15,6 +16,7 @@ class SearchByIngredient extends PureComponent {
     state = {
         chosenIngredient: '',
         allIngredients: [],
+        foundRecipes: [],
     };
 
 
@@ -31,8 +33,28 @@ class SearchByIngredient extends PureComponent {
             chosenIngredient: e.target.value
         })
     };
-
-
+    //
+    //
+    //
+    // fetchForIngredients = () => {
+    //     let joinedIngredients = this.state.allIngredients.join('%2C');
+    // fetch(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=${joinedIngredients}&limitLicense=false&number=3&ranking=1`,
+    //             {headers: {
+    //                 'X-Mashape-Key':'HLjFUpQGdUmshWEfsprU3wV6pi9Ap1ccBUvjsntswHq0ADcQun',
+    //                 'Accept':'application/json'
+    //             }}
+    //         )
+    //         .then(response => response.json())
+    //         .then(data => this.setState({
+    //             foundRecipes: data,
+    //         }))
+    //         .catch(error=> console.log(error)
+    //         )
+    // };
+    //
+    // componentDidUpdate() {
+    //     console.log(this.state)
+    // }
 
     render() {
         return (
@@ -79,14 +101,18 @@ class SearchByIngredient extends PureComponent {
                     </Row>
 
                     <Col xs={12} sm={6} smPush={3} >
-                        <Button bsSize='large'
-                                bsStyle='success'
-                                className='feature_search_by_ingredient_searchButton'>
-                                <Image className="search_image"
-                                       src={SearchWhite}
-                                       alt='Search Icon'/>
-                            SEARCH
-                        </Button>
+                        <Link to={'/Recipes/'+this.state.allIngredients}>
+                            <Button bsSize='large'
+                                    bsStyle='success'
+                                    className='feature_search_by_ingredient_searchButton'
+                                    // onClick={this.fetchForIngredients}
+                            >
+                                    <Image className="search_image"
+                                           src={SearchWhite}
+                                           alt='Search Icon'/>
+                                SEARCH
+                            </Button>
+                        </Link>
                     </Col>
 
                 </Grid>
