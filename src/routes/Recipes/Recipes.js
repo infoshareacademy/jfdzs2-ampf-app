@@ -1,5 +1,6 @@
 import React, {PureComponent, Fragment} from 'react';
-import {Image, Thumbnail, Row, Grid, Col} from 'react-bootstrap';
+import {Image, Row, Grid, Col} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 import './Recipes.style.css';
 // import Menu from "../../components/menu/menu.component";
 
@@ -34,15 +35,17 @@ class Recipes extends PureComponent {
     renderRecipes = () =>
         this.state.foundRecipes.map((item)=>
             <Col xs={12} sm={6} className='foundRecipe'
-                 key={item.id}
-                >
-                <h4>{item.title}</h4>
-                <Image
-                src={item.image}
-                alt='Recipe image'
-                className='foundRecipe-image'
-                thumbnail
-                />
+                 key={item.id}>
+
+                    <h4>{item.title}</h4>
+                <Link to={'/SingleRecipe/'+item.id}>
+                    <Image
+                    src={item.image}
+                    alt='Recipe image'
+                    className='foundRecipe-image'
+                    thumbnail
+                    />
+                </Link>
             </Col>
         );
 

@@ -33,7 +33,7 @@ ReactDOM.render(
         <Route path="/SearchByName" component={SearchByName}/>
         <Route path="/Settings" component={Settings}/>
         <Route path="/SignUp" component={SignUp}/>
-        <Route path="/SingleRecipe" component={SingleRecipe}/>
+        <Route path="/SingleRecipe/:id" component={SingleRecipe}/>
     </Switch>
 </BrowserRouter>
 

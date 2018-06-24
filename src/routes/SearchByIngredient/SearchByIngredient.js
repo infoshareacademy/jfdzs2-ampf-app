@@ -20,7 +20,6 @@ class SearchByIngredient extends PureComponent {
     };
 
 
-
     addIngredient = () => {
         this.setState({
             allIngredients: [...this.state.allIngredients, this.state.chosenIngredient],
@@ -32,6 +31,10 @@ class SearchByIngredient extends PureComponent {
         this.setState({
             chosenIngredient: e.target.value
         })
+    };
+
+    handleButtonPress = (event) => {
+        if (event.charCode === 13) this.addIngredient()
     };
     //
     //
@@ -73,18 +76,23 @@ class SearchByIngredient extends PureComponent {
 
 
                     <Row className='show-grid'>
-                        <FormGroup>
+                        <FormGroup
+                            onKeyPress={this.handleButtonPress}
+                        >
                             <Col xs={12} sm={6} smPush={1}>
                                 <FormControl type="text"
                                              value={this.state.chosenIngredient}
                                              placeholder="Your ingredient"
                                              onChange={this.changeValue}
+
+
                                 />
                             </Col>
                             <Col xs={12} sm={4} smPush={1}>
                                 <Button onClick={this.addIngredient}
                                         className='feature_search_by_ingredient_addIngredientButton'
-                                        bsStyle='success'>
+                                        bsStyle='success'
+                                        >
                                     Add Ingredient
                                 </Button>
                             </Col>
@@ -105,6 +113,7 @@ class SearchByIngredient extends PureComponent {
                             <Button bsSize='large'
                                     bsStyle='success'
                                     className='feature_search_by_ingredient_searchButton'
+
                                     // onClick={this.fetchForIngredients}
                             >
                                     <Image className="search_image"
