@@ -1,6 +1,6 @@
 import React, {PureComponent, Fragment} from 'react';
-import {Grid, Row, Col, Image, Thumbnail} from 'react-bootstrap';
-import Menu from "../../components/menu/menu.component";
+import {Grid, Row, Col, Image} from 'react-bootstrap';
+// import Menu from "../../components/menu/menu.component";
 import {Link} from 'react-router-dom';
 
 import SearchIcon from '../../utils/images/search.png';
@@ -29,7 +29,7 @@ class Search extends PureComponent {
                             <Link to='/SearchByIngredient'>
                                 <Image src={IngriedientsImage}
                                        alt='Ingredients image'
-                                       className = 'ingredientsImage'
+                                       className='ingredientsImage'
 
                                 />
                                 <div className='feature_searchTextOverImage'>Find Recipes by Ingredients</div>

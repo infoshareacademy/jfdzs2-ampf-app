@@ -6,6 +6,10 @@
     font-size: 16px;
 }
 
+.single-recipe-Main h3{
+    text-align: center;
+}
+
 .single-recipe-Main h2{
     font-size: 2.2em;
     text-align: center;
@@ -21,6 +25,7 @@
 
 .single-recipe-RecipeImage img {
     border-radius: 20px;
+    margin: auto;
 }
 
 .single-recipe-Icons {
@@ -44,7 +49,16 @@
     margin: 15px 0;
 }
 
-.single-recipe-InstructionNumber {
+.single-recipe-OneIngredient img{
+    height: 100px;
+    width: 100px;
+}
+
+.single-recipe-Instruction{
+    padding-top: 16px;
+}
+
+.single-recipe-InstructionNumber p{
     width: 50px;
     line-height: 50px;
     border-radius: 50%;
@@ -53,9 +67,12 @@
     font-size: 24px;
     font-weight: bold;
     background-color: #29B200;
+    margin: auto 0;
 }
 
 .single-recipe-InstructionInformation {
     min-height: 50px;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
 }
+

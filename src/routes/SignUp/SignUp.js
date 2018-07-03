@@ -1,5 +1,5 @@
 import React, {PureComponent, Fragment} from 'react';
-import Menu from "../../components/menu/menu.component";
+// import Menu from "../../components/menu/menu.component";
 import {Button, FormControl, Grid, Row, Col, FormGroup} from 'react-bootstrap';
 import './SignUp.style.css';
 
