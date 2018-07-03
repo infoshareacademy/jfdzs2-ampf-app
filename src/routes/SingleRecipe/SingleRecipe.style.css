@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+.single-recipe-Main {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.single-recipe-Main h2{
+    font-size: 2.2em;
+    text-align: center;
+    padding-bottom: 16px;
+    margin: 0 auto 16px;
+    max-width: 320px;
+    border-bottom: solid 2px #29B200;
+}
+
+.single-recipe-RecipeImage {
+    text-align: center;
+}
+
+.single-recipe-RecipeImage img {
+    border-radius: 20px;
+}
+
+.single-recipe-Icons {
+    background-color: #29B200;
+    border-radius: 20px;
+    padding: 16px;
+    margin: 16px 0;
+    color: white;
+}
+
+.single-recipe-SingleIcon {
+    text-align: center;
+}
+
+.single-recipe-Ingredients {
+    text-align: center;
+}
+
+.single-recipe-OneIngredient {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.single-recipe-InstructionNumber {
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #29B200;
+}
+
+.single-recipe-InstructionInformation {
+    min-height: 50px;
+    vertical-align: middle;
+}
