@@ -1,6 +1,6 @@
 import React, {PureComponent, Fragment} from 'react';
 import {Grid, Row, Col, Image, Thumbnail} from 'react-bootstrap';
-import Menu from "../../components/Header/header.component";
+import Header from "../../components/Header/header.component";
 import {Link} from 'react-router-dom';
 
 import SearchIcon from '../../utils/images/search.png';
@@ -14,7 +14,7 @@ class Search extends PureComponent {
     render() {
         return (
             <Fragment>
-                <Menu/>
+                <Header/>
                 <Grid className='feature_search'>
                     <h2>
                         <Image className="search_image"

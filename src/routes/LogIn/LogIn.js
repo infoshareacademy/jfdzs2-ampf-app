@@ -1,5 +1,5 @@
 import React, {PureComponent, Fragment} from 'react';
-import Menu from "../../components/Header/header.component";
+import Header from "../../components/Header/header.component";
 import {Button, FormControl, Grid, Row, Col, FormGroup} from 'react-bootstrap';
 import './LogIn.style.css';
 
@@ -25,7 +25,7 @@ class LogIn extends PureComponent {
     render() {
         return (
             <Fragment>
-                <Menu/>
+                <Header/>
                 <Grid className='feature_logIn'>
                     <h2>
                         Login

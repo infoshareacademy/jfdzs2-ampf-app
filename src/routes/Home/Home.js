@@ -1,6 +1,6 @@
 import React, {PureComponent, Fragment} from 'react';
 import Menu from '../../components/Header/header.component';
-class Home extends PureComponent {
+class Header extends PureComponent {
 
     render() {
         return (
@@ -11,4 +11,4 @@ class Home extends PureComponent {
     }
 }
 
-export default Home;
+export default Header;

@@ -1,10 +1,35 @@
+@import url('../../fonts.css');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .navbarContainer {
     border-radius: 0;
 }
-.navbarHeader {
-    float: right;
+
+.navbarContainer .navbarMenu > li > a:hover {
+    color: #29B200;
 }
 
-.navbarCollapse {
-    float: left;
+.navbarLogoContainer{
+    padding: 0;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbarLogoContainer > img {
+    display: inline;
+    display: inline;
+    height: 50px;
+}
+
+.navbarHeaderBrandName {
+    font-family: "Pacifico", cursive;
+    font-size: 30px;
+    display: inline;
+    color: #ffffff;
+    padding-left: 10px;
+    margin: 0;
 }
