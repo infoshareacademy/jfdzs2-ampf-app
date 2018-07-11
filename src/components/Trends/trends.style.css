@@ -1,0 +1,28 @@
+@import url('../../fonts.css');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.trendsHeader {
+    max-width: 407px;
+    text-align: center;
+    margin: 0 auto 16px;
+    padding-bottom: 16px;
+    border-bottom: solid 4px #29B200;
+}
+
+.trendsSquare {
+    height: 300px;
+    background: green;
+}
+
+.trendsSquare:nth-child(even) {
+    background: red;
+}
+
+.trendsTopRecipeImage {
+    background: blue;
+    margin: 10px;
+    height: 280px;
+}
