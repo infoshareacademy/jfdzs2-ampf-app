@@ -27,13 +27,13 @@ ReactDOM.render(
         <Route exact path="/" component={Home}/>
         <Route path="/Favourites" component={Favourites}/>
         <Route path="/LogIn" component={LogIn}/>
-        <Route path="/Recipes" component={Recipes}/>
+        <Route path="/Recipes/:ingredients" component={Recipes}/>
         <Route path="/Search" component={Search}/>
         <Route path="/SearchByIngredient" component={SearchByIngredient}/>
         <Route path="/SearchByName" component={SearchByName}/>
         <Route path="/Settings" component={Settings}/>
         <Route path="/SignUp" component={SignUp}/>
-        <Route path="/SingleRecipe" component={SingleRecipe}/>
+        <Route path="/SingleRecipe/:id" component={SingleRecipe}/>
     </Switch>
 </BrowserRouter>
 
