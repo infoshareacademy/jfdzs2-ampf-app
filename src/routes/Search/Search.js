@@ -1,5 +1,4 @@
 import React, {PureComponent, Fragment} from 'react';
-import {Grid, Row, Col, Image, Thumbnail} from 'react-bootstrap';
 import {Grid, Row, Col, Image} from 'react-bootstrap';
 import Header from "../../components/Header/header.component";
 

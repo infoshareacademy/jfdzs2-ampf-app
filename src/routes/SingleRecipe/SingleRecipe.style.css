@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+@import url('../../fonts.css');
 
 .single-recipe-Main {
     font-family: 'Montserrat', sans-serif;
@@ -16,7 +16,7 @@
     padding-bottom: 16px;
     margin: 0 auto 16px;
     max-width: 320px;
-    border-bottom: solid 2px #29B200;
+    border-bottom: solid 4px #29B200;
 }
 
 .single-recipe-RecipeImage {
