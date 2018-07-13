@@ -4,9 +4,10 @@
 .recipes-route {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    margin-bottom: 60px;
 }
 
-.recipes-route h2{
+.recipes-route h1{
     font-size: 2.2em;
     text-align: center;
     padding-bottom: 16px;
@@ -15,11 +16,17 @@
     border-bottom: solid 4px #29B200;
 }
 
+.foundRecipeTitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .foundRecipe{
     margin-top: 16px;
     text-align: center;
 }
 
-.foundRecipe-image{
-    border-radius: 20px;
+.foundRecipe-image:hover {
+    filter: brightness(70%);
 }

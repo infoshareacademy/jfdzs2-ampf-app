@@ -21,10 +21,8 @@
 
 
 .feature_search a img{
-    max-width: 100%;
     height: calc((100vh - 76px - 2em) / 2);
     object-fit: cover;
-    border-radius: 20px;
 }
 
 .feature_searchTextOverImage{

@@ -11,7 +11,7 @@ class Recipes extends PureComponent {
 
     componentDidMount(){
         const joinedIngredients = this.props.match.params.ingredients;
-        const quantityOfFoundRecipes = 4;
+        const quantityOfFoundRecipes = 6;
         fetch(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=${joinedIngredients}&limitLicense=false&number=${quantityOfFoundRecipes}&ranking=1`,
             {headers: {
                 'X-Mashape-Key':'HLjFUpQGdUmshWEfsprU3wV6pi9Ap1ccBUvjsntswHq0ADcQun',
@@ -34,16 +34,18 @@ class Recipes extends PureComponent {
     }
     renderRecipes = () =>
         this.state.foundRecipes.map((item)=>
-            <Col xs={12} sm={6} className='foundRecipe'
+            <Col xs={12} sm={6} lg={4} className='foundRecipe'
                  key={item.id}>
 
-                    <h4>{item.title}</h4>
+                    <h2 className="foundRecipeTitle">{item.title}</h2>
                 <Link to={'/SingleRecipe/'+item.id}>
                     <Image
                     src={item.image}
                     alt='Recipe image'
                     className='foundRecipe-image'
+                    rounded
                     thumbnail
+                    responsive
                     />
                 </Link>
             </Col>
@@ -54,7 +56,7 @@ class Recipes extends PureComponent {
             <Fragment>
                 <Header/>
                 <Grid className='recipes-route'>
-                    <h2>Found Recipes</h2>
+                    <h1>Found Recipes</h1>
                     <Row className='show-grid'>
                         {this.renderRecipes()}
                     </Row>

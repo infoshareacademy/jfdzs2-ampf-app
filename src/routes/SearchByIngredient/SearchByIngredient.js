@@ -36,9 +36,9 @@ class SearchByIngredient extends PureComponent {
     handleButtonPress = (event) => {
         if (event.charCode === 13) this.addIngredient()
     };
-    //
-    //
-    //
+
+
+
     // fetchForIngredients = () => {
     //     let joinedIngredients = this.state.allIngredients.join('%2C');
     // fetch(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=${joinedIngredients}&limitLicense=false&number=3&ranking=1`,
@@ -54,10 +54,10 @@ class SearchByIngredient extends PureComponent {
     //         .catch(error=> console.log(error)
     //         )
     // };
-    //
-    // componentDidUpdate() {
-    //     console.log(this.state)
-    // }
+
+    componentDidUpdate() {
+        console.log(this.state)
+    }
 
     render() {
         return (

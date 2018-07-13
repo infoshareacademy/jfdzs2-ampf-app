@@ -4,6 +4,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.trendRecipeContainer {
+    text-align: center;
+}
+
 .trendsHeader {
     max-width: 407px;
     text-align: center;

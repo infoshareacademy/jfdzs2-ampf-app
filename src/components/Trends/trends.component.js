@@ -2,39 +2,43 @@ import React, {PureComponent} from 'react';
 import {Grid, Row, Col, Image, Button} from 'react-bootstrap';
 
 import './trends.style.css';
-import data from './spoonacular-api';
+// import data from './spoonacular-api';
 
 class Trends extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      randomRecipesData: data,
+      randomRecipesData: [],
+      firstFourRecipes: [],
+      secondFourRecipes: [],
       isClicked: false,
     };
     this.toggleClick = this.toggleClick.bind(this);
   }
 
   componentDidMount() {
-    // this.fetchDataFromAPI();
+    this.fetchDataFromAPI();
   }
 
-  // fetchDataFromAPI = () => {
-  //   fetch('https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=$8',
-  //     {headers: {
-  //         'X-Mashape-Key': '4Q74Ky6hJRmshxUHMmqCCII4jFrtp1i1WNHjsnHvz2eJMOyJBi',
-  //         'Accept': 'application/json',
-  //       }}
-  //   )
-  //     .then(response => response.json()
-  //     )
-  //     .then(data => this.setState({
-  //         randomRecipesData: data.recipes,
-  //         isLoaded: true,
-  //       })
-  //     )
-  //     .catch(error => console.log('error')
-  //     );
-  // };
+  fetchDataFromAPI = () => {
+    fetch('https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=8',
+      {headers: {
+          'X-Mashape-Key': '4Q74Ky6hJRmshxUHMmqCCII4jFrtp1i1WNHjsnHvz2eJMOyJBi',
+          'Accept': 'application/json',
+        }}
+    )
+      .then(response => response.json()
+      )
+      .then(data => this.setState({
+        randomRecipesData: data.recipes,
+        firstFourRecipes: data.recipes.slice(0,4),
+        secondFourRecipes: data.recipes.slice(4,8),
+        isLoaded: true,
+        })
+      )
+      .catch(error => console.log('error')
+      );
+  };
 
   toggleClick() {
     this.setState(prevState => ({
@@ -49,6 +53,7 @@ class Trends extends PureComponent {
 
   renderRecipeData = (array) => array.map((recipe, index) =>
     <Col
+      className="trendRecipeContainer"
       key={index}
       xs={12}
       sm={6}
@@ -65,12 +70,9 @@ class Trends extends PureComponent {
   );
 
   render() {
-    const recipeArray = this.state.randomRecipesData;
-    const firstFourRecipes = recipeArray.slice(0,4);
-    const secondFourRecipes = recipeArray.slice(4,8);
     const isClicked = this.state.isClicked;
-
     let button;
+
     if (isClicked) {
       button =
         <Button
@@ -93,7 +95,7 @@ class Trends extends PureComponent {
 
     let extraRecipes;
     if (isClicked) {
-      extraRecipes = this.renderRecipeData(secondFourRecipes);
+      extraRecipes = this.renderRecipeData(this.state.secondFourRecipes);
     } else {
       extraRecipes = null;
     }
@@ -102,7 +104,7 @@ class Trends extends PureComponent {
       <Grid>
         <h1 className="trendsHeader">This week's top trends</h1>
         <Row className="show-grid">
-          {this.renderRecipeData(firstFourRecipes)}
+          {this.renderRecipeData(this.state.firstFourRecipes)}
           {extraRecipes}
         </Row>
 
