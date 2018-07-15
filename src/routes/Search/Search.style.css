@@ -25,6 +25,10 @@
     object-fit: cover;
 }
 
+.feature_search a img:hover{
+    filter: brightness(70%);
+}
+
 .feature_searchTextOverImage{
     position: absolute;
     color: white;
