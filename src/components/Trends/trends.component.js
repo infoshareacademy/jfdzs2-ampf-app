@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import {Grid, Row, Col, Image, Button} from 'react-bootstrap';
+import {IndexLinkContainer} from 'react-router-bootstrap';
 
 import './trends.style.css';
 // import data from './spoonacular-api';
@@ -59,14 +60,17 @@ class Trends extends PureComponent {
       sm={6}
     >
       <h2 className="trendsRecipeTitle">{recipe.title}</h2>
-      <Image
-        className="trendsImage"
-        src={recipe.image}
-        rounded
-        thumbnail
-        responsive
-      />
+      <IndexLinkContainer to={"/SingleRecipe/" + recipe.id}>
+        <Image
+          className="trendsImage"
+          src={recipe.image}
+          rounded
+          thumbnail
+          responsive
+        />
+      </IndexLinkContainer>
     </Col>
+
   );
 
   render() {
