@@ -3,7 +3,7 @@ import {Grid, Row, Col, Image, Button} from 'react-bootstrap';
 import {IndexLinkContainer} from 'react-router-bootstrap';
 
 import './trends.style.css';
-// import data from './spoonacular-api';
+import Loading from "../Loading/Loading.component";
 
 class Trends extends PureComponent {
   constructor(props) {
@@ -101,12 +101,27 @@ class Trends extends PureComponent {
       extraRecipes = null;
     }
 
+    const isLoaded = this.state.isLoaded;
+    let randomRecipes;
+
+    if (isLoaded) {
+      randomRecipes =
+        <Col xs={12}>
+          {this.renderRecipeData(this.state.firstFourRecipes)}
+          {extraRecipes}
+        </Col>
+    } else {
+      randomRecipes =
+        <Col xs={12}>
+          <Loading/>
+        </Col>
+    }
+
     return(
       <Grid>
         <h1 className="trendsHeader">This week's top trends</h1>
         <Row className="show-grid">
-          {this.renderRecipeData(this.state.firstFourRecipes)}
-          {extraRecipes}
+          {randomRecipes}
         </Row>
 
         <Row className="show-grid trendsSeeMoreRow">
