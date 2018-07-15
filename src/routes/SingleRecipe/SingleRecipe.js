@@ -49,6 +49,10 @@ class SingleRecipe extends PureComponent {
             )
     }
 
+    componentDidUpdate(){
+        console.log(this.state.recipeInformation)
+    }
+
     renderIngredients = () =>
         this.state.recipeInformation.extendedIngredients.map((item, index) =>
             <Col xs={6} sm={4} md={3} lg={2} className='single-recipe-OneIngredient' key={index + 1}>

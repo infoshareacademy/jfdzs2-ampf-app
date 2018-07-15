@@ -1,17 +1,19 @@
 import React, {PureComponent, Fragment} from 'react';
 import {Image, Row, Grid, Col} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import Loading from '../../components/Loading/Loading.component';
 import './Recipes.style.css';
 import Header from "../../components/Header/header.component";
 
 class Recipes extends PureComponent {
     state = {
         foundRecipes: [],
+        isLoaded: false,
     };
 
     componentDidMount() {
         const joinedIngredients = this.props.match.params.ingredients;
-        const quantityOfFoundRecipes = 4;
+        const quantityOfFoundRecipes = 6;
         fetch(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=${joinedIngredients}&limitLicense=false&number=${quantityOfFoundRecipes}&ranking=1`,
             {
                 headers: {
@@ -23,6 +25,7 @@ class Recipes extends PureComponent {
             .then(response => response.json())
             .then(data => this.setState({
                 foundRecipes: data,
+                isLoaded: true,
             }))
             .catch(error => console.log(error)
             )
@@ -57,12 +60,15 @@ class Recipes extends PureComponent {
         return (
             <Fragment>
                 <Header/>
-                <Grid className='recipes-route'>
-                    <h1>Found Recipes</h1>
-                    <Row className='show-grid'>
-                        {this.renderRecipes()}
-                    </Row>
-                </Grid>
+                {this.state.isLoaded ?
+                    <Grid className='recipes-route'>
+                        <h1>Found Recipes</h1>
+                        <Row className='show-grid'>
+                            {this.renderRecipes()}
+                        </Row>
+                    </Grid>
+                    : <Loading/>
+                }
             </Fragment>
         );
     }
