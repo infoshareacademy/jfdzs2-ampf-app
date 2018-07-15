@@ -91,10 +91,10 @@ class SingleRecipe extends PureComponent {
         this.state.isLoaded ?
         <Fragment>
           <Grid className='single-recipe-Main'>
-            <h2>{this.state.recipeInformation[0].title}</h2>
+            <h2>{this.state.recipeInformation.title}</h2>
             <Row className='show-grid'>
               <Col xs={12} className='single-recipe-RecipeImage'>
-                <Image src={this.state.recipeInformation[0].image} responsive/>
+                <Image src={this.state.recipeInformation.image} responsive/>
               </Col>
             </Row>
           </Grid>
