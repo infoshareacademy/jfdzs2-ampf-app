@@ -60,13 +60,15 @@ class Trends extends PureComponent {
       sm={6}
     >
       <h2 className="trendsRecipeTitle">{recipe.title}</h2>
-      <Image
-        className="trendsImage"
-        src = {recipe.image}
-        rounded
-        thumbnail
-        responsive
-      />      
+      <IndexLinkContainer to={'/SingleRecipe/' + recipe.id}>
+        <Image
+          className="trendsImage"
+          src = {recipe.image}
+          rounded
+          thumbnail
+          responsive
+        />
+      </IndexLinkContainer>
     </Col>
   );
 
